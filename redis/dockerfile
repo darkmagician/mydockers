@@ -1,4 +1,4 @@
-FROM debian:latest
+FROM debian:jessie
 COPY sources.list.cn /etc/apt/sources.list
 RUN apt-get update
 RUN apt-get -y install redis-server
