@@ -1,4 +1,4 @@
-FROM dakrmagician/jre:latest
+FROM darkmagician/jre:latest
 
 ENV ZK_VER 3.4.8
 RUN wget http://mirrors.cnnic.cn/apache/zookeeper/zookeeper-${ZK_VER}/zookeeper-${ZK_VER}.tar.gz
