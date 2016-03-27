@@ -1,6 +1,9 @@
 FROM mcbase
 
+RUN apt-get update
 RUN apt-get -y install perl-modules
+RUN apt-get clean
+
 RUN mkdir -p /usr/local/mysql/data
 RUN cd /opt/mysql;./scripts/mysql_install_db --user=mysql --datadir=/usr/local/mysql/data
 RUN cd /opt/mysql;chown -R root .

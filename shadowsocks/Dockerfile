@@ -1,8 +1,9 @@
 FROM debian:jessie
 
-#COPY sources.list.cn /etc/apt/sources.list
 RUN apt-get update
 RUN apt-get -y install python-pip
+RUN apt-get clean
+
 RUN pip install shadowsocks
 
 
