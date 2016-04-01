@@ -8,8 +8,9 @@ RUN apt-get -y install unzip
 RUN apt-get clean
 RUN useradd -m admin
 EXPOSE      22
-ENV PASS adminpass
+ENV ADMINPASS adminpass
+ENV ROOTPASS rootpass
 RUN mkdir /var/run/sshd  
-CMD  ["echo admin:$PASS | chpasswd  && /usr/sbin/sshd -D"]
+CMD  ["echo admin:$ADMINPASS | chpasswd && echo root:$ROOTPASS | chpasswd && /usr/sbin/sshd -D"]
 ENTRYPOINT ["/bin/sh","-c"]
 
