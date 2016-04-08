@@ -16,8 +16,10 @@ RUN unzip gmsdk-2.7.0-py3-x64-linux.zip
 RUN pip3 install /gmsdk-2.7.0-py3-x64-linux/gmsdk-2.7.0-py3-none-any.whl
 RUN rm /gmsdk-2.7.0-py3-x64-linux.zip
 
+RUN echo "export PYTHONIOENCODING=UTF-8;" >> /home/admin/.profile
 RUN echo "TZ='Asia/Shanghai'; export TZ;" >> /home/admin/.profile
 RUN echo "TESSDATA_PREFIX='/usr/share/tesseract-ocr/tessdata'; export TESSDATA_PREFIX;" >> /home/admin/.profile
+
 
 
 
