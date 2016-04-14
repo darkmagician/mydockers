@@ -10,6 +10,7 @@ RUN apt-get clean
 RUN pip3 install Pillow
 RUN pip3 install pytesseract
 RUN pip3 install sqlalchemy
+RUN TABULATE_INSTALL=lib-only;pip3 install tabulate
 
 RUN wget http://myquant.cn/downloads/sdk/python/gmsdk-2.7.0-py3-x64-linux.zip
 RUN unzip gmsdk-2.7.0-py3-x64-linux.zip
