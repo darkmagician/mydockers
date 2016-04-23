@@ -11,9 +11,9 @@ RUN apt-get clean
 
 ADD onstart.sh /
 RUN chmod +x /onstart.sh
-ENV MAILGUN_API
-ENV MAILGUN_DOMAIN
-ENV MAILGUN_TO
+ENV MAILGUN_API ""
+ENV MAILGUN_DOMAIN ""
+ENV MAILGUN_TO ""
 
 
 RUN useradd -m admin
