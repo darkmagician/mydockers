@@ -1,10 +1,10 @@
 FROM darkmagician/python3
 
+COPY sources.list.cn /etc/apt/sources.list
 RUN apt-get update
-RUN apt-get -y install zlib1g-dev
-RUN apt-get -y install libjpeg-dev
-RUN apt-get -y install tesseract-ocr
-RUN apt-get -y install tesseract-ocr-eng
+
+RUN apt-get -y install python3-urllib3='1.12-1~bpo8+1' python3-requests='2.8.1-1~bpo8+1' 
+RUN apt-get -y install zlib1g-dev libjpeg-dev tesseract-ocr tesseract-ocr-eng
 RUN apt-get clean
 
 RUN pip3 install Pillow
